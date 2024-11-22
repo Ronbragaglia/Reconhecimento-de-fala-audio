@@ -28,3 +28,6 @@ Chamada da Função de Reconhecimento:
 
 A chamada comando = reconhecer_fala("audio.wav") deve ser feita após a confirmação de que o arquivo foi convertido com sucesso.
 
+![image](https://github.com/user-attachments/assets/57b06082-a560-461b-b7bc-2717b01aeb8c)
+
+
