@@ -1,33 +1,42 @@
-Observações sobre o Código:
+# Reconhecimento de Fala em Áudio
 
-Importação de Bibliotecas:
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white) ![Topic](https://img.shields.io/badge/Topic-speech-recognition-green) ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-As bibliotecas speech_recognition e google.colab.files estão corretamente importadas.
+## Descrição
 
-Função de Reconhecimento de Fala:
+Sistema de transcrição de arquivos de áudio (incluindo áudios do WhatsApp) usando SpeechRecognition e FFmpeg para conversão de formatos.
 
-A função reconhecer_fala está bem estruturada, utilizando with para abrir o arquivo de áudio, o que garante que o arquivo será fechado corretamente após o uso.
-O uso de try...except para tratar exceções é uma boa prática, pois isso evita que o programa quebre em caso de erros.
+## Funcionalidades
 
-tratamento de Exceções:
+- Transcrição de áudio para texto em português
+- Suporte a arquivos de áudio do WhatsApp (.ogg/.opus)
+- Conversão automática de formato com FFmpeg
+- Output em texto limpo e formatado
+- Compatível com múltiplos formatos de áudio
 
-As exceções sr.UnknownValueError e sr.RequestError são tratadas corretamente, informando o usuário sobre possíveis problemas.
+## Stack Tecnológico
 
+| Tecnologia | Descrição |
+|---|---|
+| Python | Linguagem principal |
+| SpeechRecognition | Transcrição de fala |
+| FFmpeg | Conversão de formatos de áudio |
+| Google Speech API | Motor de reconhecimento |
 
-so do Google Colab:
+## Como Usar
 
-A linha que solicita o upload de arquivos (uploaded = files.upload()) é uma boa forma de interação com o usuário.
-A extração do nome do arquivo usando next(iter(uploaded)) é uma abordagem eficiente para obter o nome do primeiro arquivo carregado.
+1. Instale FFmpeg: [ffmpeg.org](https://ffmpeg.org)
+2. Instale dependências: `pip install SpeechRecognition pydub`
+3. Execute: `python reconhecer.py caminho/do/audio.ogg`
 
+## Estrutura de Pastas
 
-Conversão de Formato de Áudio:
+```
+├── reconhecer.py
+├── audios/
+└── requirements.txt
+```
 
-O uso do comando !ffmpeg para converter o arquivo de áudio para o formato .wav é uma boa solução, mas deve haver uma verificação para garantir que o ffmpeg esteja disponível no ambiente de execução.
+---
 
-Chamada da Função de Reconhecimento:
-
-A chamada comando = reconhecer_fala("audio.wav") deve ser feita após a confirmação de que o arquivo foi convertido com sucesso.
-
-![image](https://github.com/user-attachments/assets/57b06082-a560-461b-b7bc-2717b01aeb8c)
-
-
+> Feito com ❤️ por Rone Bragaglia · ML Engineer & Fundador CobrançaAuto
